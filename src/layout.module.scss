@@ -1,0 +1,39 @@
+@use "./scss/mixins";
+@use "./scss/functions";
+
+.appConatiner {
+  height: 100%;
+
+  @include mixins.tablet() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: auto;
+  }
+}
+
+.pageContainer {
+  height: 93%;
+  overflow: auto;
+  @include mixins.tablet() {
+    height: 80%;
+    width: 90%;
+  }
+}
+
+.navContainer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  height: 7%;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  @include mixins.tablet() {
+    position: static;
+    width: 60%;
+  }
+}

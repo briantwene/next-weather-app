@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,800;1,800&display=swap");
+* {
+  padding: 0em;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "poppins", "roboto", sans-serif;
+}
+
+#root {
+  height: 100%;
+  background: #0080f5;
+  background: linear-gradient(180deg, #0080f5 0%, #ffecb8 70%, #ff9d13 100%);
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

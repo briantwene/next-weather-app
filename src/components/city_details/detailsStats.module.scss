@@ -1,0 +1,44 @@
+@use "../../scss/functions";
+@use "../../scss/mixins";
+
+.statsContainer {
+  background-color: rgba(87, 87, 87, 0.281);
+  margin: 1em;
+  height: 50%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sunIcons {
+  font-size: functions.em(24);
+}
+
+.labels {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: functions.em(20);
+  text-align: center;
+}
+.infoGrid {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.infoGridItem {
+  width: 50%;
+
+  @include mixins.centerXY(column);
+}
+
+.infoHeading {
+  font: {
+    size: functions.em(21);
+    weight: 500;
+  }
+}
+
+.infoValue {
+}

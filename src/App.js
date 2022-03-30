@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import CityDetails from "./pages/CityDetails";
+import "./css/Global.css";
+import styles from "./layout.module.scss";
+import NavBar from "./components/nav/NavBar";
+import { Route, Router, Routes } from "react-router-dom";
+import Settings from "./pages/Settings";
+import SearchCity from "./pages/SearchCity";
 
 function App() {
+  const [location, setLocation] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.appConatiner}>
+      <div className={styles.pageContainer}>
+        {/* {weatherData && <CityDetails weather={weatherData} />} */}
+
+        <Routes>
+          <Route path="/weather" element={<CityDetails city={location} />} />
+          <Route path="/" element={<SearchCity setLocation={setLocation} />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </div>
+      <div className={styles.navContainer}>
+        <NavBar />
+      </div>
     </div>
   );
 }

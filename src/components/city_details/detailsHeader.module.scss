@@ -1,0 +1,41 @@
+@use "../../scss/functions";
+@use "../../scss/mixins";
+
+.headerContainer {
+  height: 30%;
+  display: flex;
+}
+
+.headerInfo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em 0em 1em 1em;
+}
+
+.weatherText {
+  font-size: functions.em(21);
+}
+
+.tempText {
+  font: {
+    size: functions.em(48);
+    weight: 500;
+  }
+  display: flex;
+  flex-direction: column;
+
+  .tempFeelText {
+    font-size: 0.5em;
+  }
+}
+
+.weatherIconContainer {
+  width: 40%;
+  @include mixins.centerXY(column);
+}
+
+.weatherIconMain {
+  font-size: functions.em(144);
+}

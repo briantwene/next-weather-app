@@ -1,0 +1,24 @@
+@mixin tablet() {
+  @media (min-width: 43em) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: 62em) {
+    @content;
+  }
+}
+@mixin desktop_plus() {
+  @media (min-width: 82em) {
+    @content;
+  }
+}
+
+//make it more better than usual
+@mixin centerXY($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
